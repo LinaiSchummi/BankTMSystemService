@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction Management</title>
+</head>
+<body>
+<h1>Transaction List</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>userId</th>
+        <th>userAmount</th>
+        <th>userTransactionTime</th>
+        <th>isSaveMoney</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="transaction : ${transactions}">
+        <td th:text="${transaction.userId}"></td>
+        <td th:text="${transaction.userAmount}"></td>
+        <td th:text="${transaction.userTransactionTime}"></td>
+        <td th:text="${transaction.isSaveMoney}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
